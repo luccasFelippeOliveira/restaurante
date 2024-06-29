@@ -28,10 +28,13 @@ import '@ionic/react/css/display.css';
 
 /* import '@ionic/react/css/palettes/dark.always.css'; */
 /* import '@ionic/react/css/palettes/dark.class.css'; */
-import '@ionic/react/css/palettes/dark.system.css';
+// import '@ionic/react/css/palettes/dark.system.css';
 
 /* Theme variables */
 import './theme/variables.css';
+import Category from './pages/Category';
+import Dish from './pages/Dish';
+import DishOfDay from './pages/DishOfTheDay';
 
 setupIonicReact();
 
@@ -42,6 +45,9 @@ const App: React.FC = () => (
         <Route exact path="/home">
           <Home />
         </Route>
+        <Route exact path="/category/:id" component={Category}/>
+        <Route exact path="/dish/:id" component={Dish}/>
+        <Route exact path="/dish/prato-do-dia" component={DishOfDay} />
         <Route exact path="/">
           <Redirect to="/home" />
         </Route>
