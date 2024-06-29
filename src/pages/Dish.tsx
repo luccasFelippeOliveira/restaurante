@@ -7,8 +7,6 @@ interface DishProps extends RouteComponentProps<{
 }> {}
 
 const Dish: React.FC<DishProps> = ({match}) => {
-  // Fetch dish information based on dishId
-  console.log('match', match.params.id);
   const dish = getDishById(Number(match.params.id));
 
   return (

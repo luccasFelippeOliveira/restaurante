@@ -16,7 +16,15 @@ const DishInformation: React.FC<{ dish: TMenuItem }> = ({ dish }) => {
   return (
     <>
       <IonRow>
-        <img src={dish.image} alt={dish.name} />
+        <img
+          style={{
+            maxHeight: "200px",
+            minWidth: "100%",
+            objectFit: "cover",
+          }}
+          src={dish.image}
+          alt={dish.name}
+        />
       </IonRow>
       <IonRow>
         <h1>{dish.name}</h1>
